@@ -34,10 +34,10 @@ jobs:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         run: python daily_poster.py
 
-      - name: Update Sent History
+      - name: Commit and Push Changes (Delete Video)
         run: |
-          git config --global user.name "GitHub Actions Bot"
+          git config --global user.name "Automation8248"
           git config --global user.email "actions@github.com"
-          git add sent_history.txt
-          # Check if there are changes before committing to avoid errors
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update video history" && git push)
+          git add -u
+          git commit -m "Auto-deleted posted video" || echo "No changes to commit"
+          git push
