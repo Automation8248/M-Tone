@@ -18,8 +18,8 @@ DELETE_AFTER_DAYS = 15
 SEO_HASHTAGS = "#LofiHindi #SadLofi #SlowedReverb #MidnightVibes #HindiSongs #ArijitSingh #BrokenHeart #MusicLover #IndianLofi"
 
 # Fallback Content
-DEFAULT_TITLE = "Midnight Memories"
-DEFAULT_CAPTION = "Lost in the echo of silence."
+DEFAULT_TITLE = "A Lofi Journey Through Lost Memories and Quiet Tears in the Stillness of Night"
+DEFAULT_CAPTION = "late nights & quiet thoughts,Lost in the echo of silence."
 
 def generate_clean_lofi_content():
     """
