@@ -34,10 +34,16 @@ jobs:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         run: python daily_poster.py
 
-      - name: Commit and Push Changes (Delete Video)
+      - name: Commit and Push Changes
         run: |
           git config --global user.name "Automation8248"
           git config --global user.email "actions@github.com"
+          
+          # Add updated history file
+          git add sent_history.txt
+          
+          # 'git add -u' deleted files ko bhi stage karta hai
           git add -u
-          git commit -m "Auto-deleted posted video" || echo "No changes to commit"
+          
+          git commit -m "Daily: Posted video & Cleaned old files" || echo "No changes to commit"
           git push
